@@ -24,6 +24,9 @@ public class Vuelo {
 	@Column(name = "asientos_disponibles", nullable = false)
 	private int asientosDisponibles;
 
+	@Column(name = "destino", length = 100)
+	private String destino;
+	
 	public Vuelo() {
 	}
 
@@ -33,6 +36,14 @@ public class Vuelo {
 		this.asientosDisponibles = asientosDisponibles;
 	}
 
+	public String getDestino() {
+	    return destino;
+	}
+
+	public void setDestino(String destino) {
+	    this.destino = destino;
+	}
+	
 	public Long getId() {
 		return id;
 	}
